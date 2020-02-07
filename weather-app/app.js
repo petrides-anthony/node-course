@@ -20,17 +20,21 @@ const request = require('request')
 // Geocoding
 // Address -> Lat/Long -> Weather
 
-const geocodingApiToken = 'pk.eyJ1IjoiYXBldHJpZGVzIiwiYSI6ImNrNmFncmNjaDA0cWYzbW9naWN1Y243ZHEifQ.ZTYdhBxLqIKhSfvC8GbVaw'
-const geocodingApi = `https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=${geocodingApiToken}&limit=1`
+// const geocodingApiToken = 'pk.eyJ1IjoiYXBldHJpZGVzIiwiYSI6ImNrNmFncmNjaDA0cWYzbW9naWN1Y243ZHEifQ.ZTYdhBxLqIKhSfvC8GbVaw'
+// const geocodingApi = `https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=${geocodingApiToken}&limit=1`
 
-request({ url: geocodingApi, json: true }, (error, response) => {
-    if (error) {
-        console.log('Unable to connect to the Geocoding service!')
-    } else if (response.body.features.length === 0) {
-        console.log('Unable to calculate geocoding on provided')
-    } else {
-        const longitude = response.body.features[0].center[0]
-        const latitude = response.body.features[0].center[1]
-        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`)
-    }
-})
+// request({ url: geocodingApi, json: true }, (error, response) => {
+//     if (error) {
+//         console.log('Unable to connect to the Geocoding service!')
+//     } else if (response.body.features.length === 0) {
+//         console.log('Unable to calculate geocoding on provided')
+//     } else {
+//         const longitude = response.body.features[0].center[0]
+//         const latitude = response.body.features[0].center[1]
+//         console.log(`Latitude: ${latitude}, Longitude: ${longitude}`)
+//     }
+// })
+
+const geocode = (address, callback) => {
+
+}
